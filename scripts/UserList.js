@@ -298,7 +298,7 @@ const users = [{
     "last_name": "Worwood",
     "gender": "Male",
     "language": "Zulu"
-}]
+}];
 
 class UserList {
     constructor(users) {
@@ -308,7 +308,7 @@ class UserList {
     showNames() {
         users.forEach(function (user) {
             console.log(user.first_name);
-        })
+        });
         return this;
     }
 
@@ -326,8 +326,9 @@ class UserList {
             newUser = {id: users.length + 1, ...newUser};
             users.push(newUser);
             console.log(`Hello everyone i am ${newUser.first_name}`);
+        } else {
+            console.log('Please add object where first_name field is required!');
         }
-        console.log('Please add object where first_name field is required!');
         return this;
     }
 
@@ -355,6 +356,6 @@ test.add({
     last_name: 'Maslo',
     gender: 'Male',
     language: 'Ukrainian',
-})
+});
 test.showNames().showById(5).removeById(10).logUsersCount();
 console.log(users);

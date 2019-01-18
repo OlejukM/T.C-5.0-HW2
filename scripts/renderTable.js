@@ -23,6 +23,6 @@ renderTable(5, 5);
 let element = document.getElementById("root");
 element.onclick = function (event) {
     let target = event.target;
-    if (target.tagName != 'TD') return;
+    if (target.tagName !== 'TD') return;
     alert(target.textContent);
-}
+};
